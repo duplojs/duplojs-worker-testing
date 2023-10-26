@@ -1,5 +1,6 @@
 import {defineConfig} from "rollup";
 import esbuild from "rollup-plugin-esbuild";
+import json from "@rollup/plugin-json";
 
 export default defineConfig([
 	{
