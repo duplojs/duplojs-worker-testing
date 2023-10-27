@@ -24,7 +24,6 @@
     "build": "rollup --config && npx tsc"
   },
   "dependencies": {
-    "@duplojs/duplojs": ">=0.6.13",
     "zod": "^3.22.4",
     "chalk": "^4.1.0"
   },
