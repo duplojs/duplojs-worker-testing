@@ -1,8 +1,8 @@
 ---
 name: Signalement de bug
 about: Créer un rapport pour nous aider à nous améliorer
-title: '[fix]'
-labels: fix
+title: '[bug]'
+labels: bug
 assignees: ''
 ---
 
