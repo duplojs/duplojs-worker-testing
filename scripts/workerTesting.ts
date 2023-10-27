@@ -214,10 +214,10 @@ export type testsErrors = {
 	}[],
 };
 
-export async function workersTesting(...paths: string[]){
+export async function workersTesting(importer: (string: string) => Promise<any>, ...paths: string[]){
 	const testsErrors: testsErrors[] = [];
 	for(const path of paths){
-		const {default: test} = await import(path);
+		const {default: test} = await importer(path);
 		const resultErrors = await (test as ReturnType<typeof workerTesting>);
 		if(resultErrors.length !== 0){
 			testsErrors.push({
@@ -250,3 +250,4 @@ export async function workersTesting(...paths: string[]){
 		throw new Error(chalk.redBright("TESTING ERROR"));
 	}
 }
+
