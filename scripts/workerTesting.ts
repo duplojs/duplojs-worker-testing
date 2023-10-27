@@ -242,7 +242,7 @@ export async function workersTesting(importer: (string: string) => Promise<any>,
 			console.log(value.path, ":");
 			value.tests.forEach(subValue => {
 				console.log(subValue.title);
-				subValue.errors.forEach(console.error);
+				subValue.errors.forEach(error => console.error(error));
 				console.log("");
 			});
 			console.log("");
