@@ -95,7 +95,7 @@ export async function workerTesting(file: string, testing: testing[], beforReady
 		console.log(chalk.underline("URL"), ":", url);
 		console.log(chalk.underline("METHOD"), ":", test.method);
 		
-		if(test.body && !(test.body instanceof FormData)) test.body = JSON.stringify(test.body);
+		if(typeof test.body === "object" && !(test.body instanceof FormData)) test.body = JSON.stringify(test.body);
 
 		const response = await fetch(
 			url,
