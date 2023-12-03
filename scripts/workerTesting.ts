@@ -31,12 +31,7 @@ export async function workerTesting(file: string, testing: testing[], beforReady
 	const thread = new Worker(
 		file, 
 		{
-			execArgv: [
-				"--require", 
-				process.argv.includes("--speed") ? 
-					"sucrase/register" : 
-					"ts-node/register"
-			],
+			execArgv: ["--require", "sucrase/register"]
 		}
 	);
 	
