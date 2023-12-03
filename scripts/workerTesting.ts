@@ -30,7 +30,7 @@ export async function workerTesting(file: string, testing: testing[], beforReady
 	const thread = new Worker(
 		file, 
 		{
-			execArgv: ["--require", "ts-node/register"]
+			execArgv: ["--require", "sucrase/register"]
 		}
 	);
 	
