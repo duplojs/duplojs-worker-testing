@@ -26,11 +26,17 @@ export type testError = {
 	error: string,
 };
 
+
 export async function workerTesting(file: string, testing: testing[], beforReadyOutput: string[] = []){
 	const thread = new Worker(
 		file, 
 		{
-			execArgv: ["--require", "sucrase/register"]
+			execArgv: [
+				"--require", 
+				process.argv.includes("--speed") ? 
+					"sucrase/register" : 
+					"ts-node/register"
+			],
 		}
 	);
 	
