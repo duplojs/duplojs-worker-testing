@@ -21,12 +21,13 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "nodemon --exec 'node --require sucrase/register test/index.ts'",
+    "test": "ts-node --transpiler sucrase/ts-node-plugin test",
     "build": "rollup --config && npx tsc"
   },
   "dependencies": {
     "chalk": "^4.1.0",
     "sucrase": "^3.34.0",
+    "ts-node": "^10.9.2",
     "zod": "^3.22.4"
   },
   "devDependencies": {
