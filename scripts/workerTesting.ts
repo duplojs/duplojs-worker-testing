@@ -33,9 +33,7 @@ export async function workerTesting(file: string, testing: testing[], beforReady
 		{
 			execArgv: [
 				"--require", 
-				process.argv.includes("--speed") ? 
-					"sucrase/register" : 
-					"ts-node/register"
+				"sucrase/register"
 			],
 		}
 	);
