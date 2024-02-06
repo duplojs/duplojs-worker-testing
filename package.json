@@ -22,8 +22,8 @@
   },
   "scripts": {
     "build": "rollup --config && npx tsc",
-	"test:e2e": "node --require sucrase/register test",
-	"test:types": "tsc --noEmit --emitDeclarationOnly false"
+    "test:e2e": "node --require sucrase/register test",
+    "test:types": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
     "chalk": "^4.1.0",
@@ -31,8 +31,7 @@
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@duplojs/worker-testing": "^0.2.6",
-    "@rollup/plugin-json": "^6.0.1",
+    "@duplojs/duplojs": "^1.1.2",
     "@types/node": "^18.15.11",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
@@ -44,4 +43,3 @@
     "typescript": "^5.0.2"
   }
 }
-  
