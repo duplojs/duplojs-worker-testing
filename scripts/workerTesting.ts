@@ -33,7 +33,7 @@ export async function workerTesting(file: string, testing: testing[], beforReady
 		{
 			execArgv: [
 				"--require", 
-				"sucrase/register"
+				"tsx/cjs"
 			],
 		}
 	);
